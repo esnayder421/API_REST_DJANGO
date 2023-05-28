@@ -54,6 +54,7 @@ LOCAL_APPS = [
 
 THIRD_APPS = [
     'rest_framework',
+    'drf_yasg',
 ]
 
 INSTALLED_APPS = BASE_APPS + LOCAL_APPS + THIRD_APPS
@@ -95,7 +96,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='sqlite3:///db.sqlite3',
+        default='sqlite:///db.sqlite3',
         conn_max_age=600    
     )
 }
